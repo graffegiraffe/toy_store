@@ -8,14 +8,14 @@ import java.time.format.DateTimeFormatter;
 public class Purchase {
     private final Toy toy;
     private double price;
-    private final LocalDateTime purchaseDateTime; // final
+    private final LocalDateTime purchaseDateTime;
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     @Override
     public String toString() {
         String formattedDateTime = purchaseDateTime.format(formatter);
         return "Purchase{" +
-                "toy=" + toy.getName() +  // Выводим имя игрушки
+                "toy=" + toy.getName() +
                 ", price=" + price +
                 ", purchaseDateTime=" + formattedDateTime +
                 '}';
